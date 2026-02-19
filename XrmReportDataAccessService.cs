@@ -27,6 +27,7 @@ namespace APIService.ReportService.XrmDotNetReport.Service
         {
             try
             {
+                
                 var sqlTables = XrmDotNetReportHelper.SplitSqlSps(sqlQuery, cancellationToken);
                 cancellationToken.ThrowIfCancellationRequested();
                 var result = new Dictionary<string, IEnumerable<int>>();
@@ -518,3 +519,4 @@ namespace APIService.ReportService.XrmDotNetReport.Service
         }
     }
 }
+
